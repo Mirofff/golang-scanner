@@ -4,11 +4,10 @@ Copyright © 2023 Mirofff <miroslav.zherenkov@gmail.com>
 package cmd
 
 import (
-	"go/scanner"
 	"os"
 
+	"github.com/Mirofff/golang-scanner/pkg/scanner"
 	"github.com/spf13/cobra"
-	"github.com/pkg/scanner"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -19,7 +18,10 @@ var rootCmd = &cobra.Command{
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		
+		Scanner := scanner.Scanner{
+			start_port: 20,
+		}
+		Scanner.Scan()
 	},
 }
 
