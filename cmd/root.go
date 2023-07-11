@@ -4,9 +4,11 @@ Copyright © 2023 Mirofff <miroslav.zherenkov@gmail.com>
 package cmd
 
 import (
+	"go/scanner"
 	"os"
 
 	"github.com/spf13/cobra"
+	"github.com/pkg/scanner"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -16,7 +18,9 @@ var rootCmd = &cobra.Command{
 	Long:  ``,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Run: func(cmd *cobra.Command, args []string) {
+		
+	},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
